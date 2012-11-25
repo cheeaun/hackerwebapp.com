@@ -1,0 +1,188 @@
+html{
+	overflow-x: hidden;
+}
+body{
+	font-family: "PT Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	color: #333;
+	margin: 0;
+	padding: 0;
+	-webkit-text-size-adjust: none;
+	overflow-x: hidden;
+}
+a{
+	color: #08C;
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+}
+p{
+	line-height: 1.5em;
+}
+header{
+	background-image: -webkit-linear-gradient(top, #f6f6f6, #fff 20px);
+	background-image: -moz-linear-gradient(top, #f6f6f6, #fff 20px);
+	background-image: -ms-linear-gradient(top, #f6f6f6, #fff 20px);
+	background-image: -o-linear-gradient(top, #f6f6f6, #fff 20px);
+	background-image: linear-gradient(top, #f6f6f6, #fff 20px);
+}
+.body-section{
+	background-color: #eff0f1;
+	background-image: -webkit-linear-gradient(top, #f9f9f9, #fff 200px);
+	background-image: -moz-linear-gradient(top, #f9f9f9, #fff 200px);
+	background-image: -ms-linear-gradient(top, #f9f9f9, #fff 200px);
+	background-image: -o-linear-gradient(top, #f9f9f9, #fff 200px);
+	background-image: linear-gradient(top, #f9f9f9, #fff 200px);
+	border-top: 1px solid #ddd;
+}
+.container{
+	position: relative;
+	margin: auto;
+	max-width: 1024px;
+	padding: 50px 0;
+	text-align: center;
+}
+header .container{
+	padding: 150px 20px;
+}
+header a{
+	color: #333;
+}
+#app-icon{
+	display: inline-block;
+	width: 82px;
+	height: 82px;
+	background: #fff url(icons/app-icon.png) no-repeat;
+	margin: 0 0 10px;
+}
+.container h1{
+	color: #000;
+	font-size: 32px;
+	margin: 0 0 10px;
+	padding: 0;
+	line-height: 1;
+}
+.container h2{
+	color: #777;
+	font-size: 26px;
+	font-weight: normal;
+	margin: 0 0 50px;
+	padding: 0;
+	letter-spacing: -1px;
+	line-height: 1;
+	text-shadow: 0 1px #fff;
+}
+.container p{
+	margin: 0 10px 20px;
+	padding: 0;
+	line-height: 1;
+}
+.available-button{
+	display: inline-block;
+	color: #888;
+	background-color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+	text-shadow: none;
+	padding: 10px 20px;
+	border-radius: 20px;
+	border: 2px solid #ccc;
+}
+.available-button:hover{
+	border-color: #888;
+	text-decoration: none;
+}
+#iphone-screenshots-container{
+	text-align: center;
+	letter-spacing: 30px;
+}
+#iphone-screenshots-container div{
+	display: inline-block;
+	width: 320px;
+	height: 460px;
+	background-color: #fff;
+	background-repeat: no-repeat;;
+	-webkit-background-size: 320px 460px;
+	-moz-background-size: 320px 460px;
+	-ms-background-size: 320px 460px;
+	-o-background-size: 320px 460px;
+	background-size: 320px 460px;
+	border: 1px solid #333;
+	box-shadow: 0 2px 3px rgba(0,0,0,.3);
+	margin: 0px 0 30px;
+	border-radius: 5px;
+}
+#iphone-1-screenshot{
+	background-image: url(screenshots/iphone-1.png);
+}
+#iphone-2-screenshot{
+	background-image: url(screenshots/iphone-2.png);
+}
+#ipad-screenshot-container{
+	display: none;
+}
+footer{
+	text-align: center;
+	padding: 50px 20px;
+}
+@media all and (min-width: 640px){
+	#available-link{
+		display: inline-block;
+	}
+	#iphone-2-screenshot:hover{
+		z-index: 4;
+	}
+	#header-description-container{
+		min-height: 550px;
+	}
+	#ipad-screenshot-container{
+		margin: 0 0 30px 20px;
+		display: block;
+	}
+	#ipad-screenshot{
+		display: block;
+		width: 1024px;
+		height: 748px;
+		background: #fff url(screenshots/ipad.png) no-repeat;
+		-webkit-background-size: 1024px 748px;
+		-moz-background-size: 1024px 748px;
+		-ms-background-size: 1024px 748px;
+		-o-background-size: 1024px 748px;
+		background-size: 1024px 748px;
+		border: 1px solid #333;
+		box-shadow: 0 2px 3px rgba(0,0,0,.3);
+		border-radius: 6px;
+	}
+}
+@media all and (min-width: 1024px){
+	#iphone-screenshots-container{
+		top: 35px;
+	}
+	#ipad-screenshot-container{
+		margin-left: 0;
+	}
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+	only screen and (-o-min-device-pixel-ratio: 3/2),
+	only screen and (min--moz-device-pixel-ratio: 1.5),
+	only screen and (min-device-pixel-ratio: 1.5) {
+	
+	#app-icon{
+		width: 81px;
+		height: 81px;
+		-moz-background-size: 81px 81px;
+		-o-background-size: 81px 81px;
+		background-size: 81px 81px;
+		background-image: url(icons/app-icon@2x.png);
+	}
+	#iphone-1-screenshot{
+		background-image: url(screenshots/iphone-1@2x.png);
+	}
+	#iphone-2-screenshot{
+		background-image: url(screenshots/iphone-2@2x.png);
+	}
+	#ipad-screenshot{
+		background-image: url(screenshots/ipad@2x.png);
+	}
+}
