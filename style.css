@@ -35,6 +35,9 @@ body>header{
 	background-image: linear-gradient(top, #eee, #f9f9f9 5px, #fff 200px);
 	border-top: 1px solid #ddd;
 }
+.body-section-last{
+	padding: 60px 0;
+}
 .container{
 	position: relative;
 	margin: auto;
@@ -190,6 +193,9 @@ footer{
 	}
 }
 @media all and (min-width: 640px){
+	.body-section-last{
+		padding: 120px 0;
+	}
 	#ipad-container{
 		display: block;
 	}
@@ -258,7 +264,7 @@ footer{
 	only screen and (-o-min-device-pixel-ratio: 3/2),
 	only screen and (min--moz-device-pixel-ratio: 1.5),
 	only screen and (min-device-pixel-ratio: 1.5) {
-	
+
 	#app-icon{
 		width: 81px;
 		height: 81px;
