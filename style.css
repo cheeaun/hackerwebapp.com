@@ -289,3 +289,13 @@ footer{
 		background-image: url(screenshots/ipad@2x.png);
 	}
 }
+
+@-ms-viewport{
+	width: device-width;
+	zoom: 1.0;
+}
+
+@viewport{
+	width: device-width;
+	zoom: 1.0;
+}
