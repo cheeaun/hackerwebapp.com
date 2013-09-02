@@ -1,8 +1,17 @@
 <!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HackerWeb &ndash; a simply readable Hacker News web app</title>
 <link rel="stylesheet" href="style.css">
+<meta itemprop="image" content="icons/app-icon.png">
+<meta property="og:url" content="http://hackerwebapp.com/">
+<meta property="og:title" content="HackerWeb">
+<meta property="og:description" content="A simply readable Hacker News web app">
+<meta property="og:image" content="icons/app-icon.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="82">
+<meta property="og:image:height" content="82">
 <script>
 var _gaq = [['_setAccount', 'UA-36575624-1'], ['_trackPageview']];
 (function(d, t){
@@ -14,8 +23,8 @@ var _gaq = [['_setAccount', 'UA-36575624-1'], ['_trackPageview']];
 <header>
 	<div class="container">
 		<div id="app-icon"></div>
-		<h1>HackerWeb</h1>
-		<p>A simply readable <a href="https://news.ycombinator.com/" target="_blank">Hacker News</a> web app</p>
+		<h1 itemprop="name">HackerWeb</h1>
+		<p itemprop="description">A simply readable <a href="https://news.ycombinator.com/" target="_blank">Hacker News</a> web app</p>
 		<p><a href="http://cheeaun.github.io/hackerweb/" target="_blank" class="available-button" onclick="_gaq.push(['_trackEvent', 'Outbound links', 'Clicks', this.href]);">Available on the web</a></p>
 	</div>
 </header>
@@ -102,10 +111,11 @@ var _gaq = [['_setAccount', 'UA-36575624-1'], ['_trackPageview']];
 		<iframe src="http://ghbtns.com/github-btn.html?user=cheeaun&type=follow"
   allowtransparency="true" frameborder="0" scrolling="0" width="132" height="20"></iframe>
 	</p>
-	<p><a href="http://cheeaun.com/blog/2012/03/how-i-built-hacker-news-mobile-web-app">Meticulously built</a> by <a href="http://cheeaun.com/">Lim Chee Aun</a>. Open-sourced on <a href="https://github.com/cheeaun/hackerweb">GitHub</a>. Not affiliated with <a href="https://news.ycombinator.com/">Hacker News</a> or&nbsp;<a href="http://ycombinator.com/">YCombinator</a>.</p>
+	<p><a href="http://cheeaun.com/blog/2012/03/how-i-built-hacker-news-mobile-web-app">Meticulously built</a> by <a href="http://cheeaun.com/" itemprop="creator">Lim Chee Aun</a>. Open-sourced on <a href="https://github.com/cheeaun/hackerweb">GitHub</a>. Not affiliated with <a href="https://news.ycombinator.com/">Hacker News</a> or&nbsp;<a href="http://ycombinator.com/">YCombinator</a>.</p>
 </footer>
 <script async>
 setTimeout(function(){
 	!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 }, 2000);
 </script>
+</html>
