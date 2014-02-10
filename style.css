@@ -2,8 +2,8 @@ html{
 	overflow-x: hidden;
 }
 body{
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 14px;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 16px;
 	color: #333;
 	margin: 0;
 	padding: 0;
@@ -11,28 +11,16 @@ body{
 	overflow-x: hidden;
 }
 a{
-	color: #08C;
+	color: #007aff;
 	text-decoration: none;
 }
 a:hover{
 	text-decoration: underline;
 }
 p{
-	line-height: 1.5em;
-}
-body>header{
-	background-image: -webkit-linear-gradient(top, #eee, #fff 5px);
-	background-image: -moz-linear-gradient(top, #eee, #fff 5px);
-	background-image: -ms-linear-gradient(top, #eee, #fff 5px);
-	background-image: -o-linear-gradient(top, #eee, #fff 5px);
-	background-image: linear-gradient(top, #eee, #fff 5px);
+	line-height: 1.5;
 }
 .body-section{
-	background-image: -webkit-linear-gradient(top, #eee, #f9f9f9 5px, #fff 200px);
-	background-image: -moz-linear-gradient(top, #eee, #f9f9f9 5px, #fff 200px);
-	background-image: -ms-linear-gradient(top, #eee, #f9f9f9 5px, #fff 200px);
-	background-image: -o-linear-gradient(top, #eee, #f9f9f9 5px, #fff 200px);
-	background-image: linear-gradient(top, #eee, #f9f9f9 5px, #fff 200px);
 	border-top: 1px solid #ddd;
 }
 .body-section-last{
@@ -54,22 +42,24 @@ header a{
 }
 #app-icon{
 	display: inline-block;
-	width: 82px;
-	height: 82px;
+	width: 72px;
+	height: 72px;
 	background: #fff url(icons/app-icon.png) no-repeat;
+	border-radius: 17px;
 	margin: 0 0 10px;
 }
 .container h1{
-	font-size: 36px;
+	font-size: 46px;
 	margin: 0 0 10px;
 	padding: 0;
 	line-height: 1;
 	letter-spacing: -1px;
+	font-weight: 300;
 }
 .container h2{
-	font-size: 30px;
-	font-weight: normal;
-	margin: 0 0 5px;
+	font-size: 44px;
+	font-weight: 300;
+	margin: 0 0 20px;
 	padding: 0;
 	letter-spacing: -1px;
 	line-height: 1.1;
@@ -87,27 +77,26 @@ header a{
 	text-shadow: 0 1px #fff;
 }
 .container p{
-	margin: 0 0 20px;
+	margin: 0 auto 20px;
 	padding: 0;
-	line-height: 1.3;
+	line-height: 1.5;
+	max-width: 45em;
 }
 .available-button{
-	color: #08C;
+	font-size: 15px;
+	color: #007aff;
 	display: inline-block;
 	text-decoration: none;
 	text-shadow: none;
 	padding: 8px 20px;
-	border-radius: 20px;
-	border: 2px solid #eee;
-	-webkit-transition: border-color .3s;
-	-moz-transition: border-color .3s;
-	-ms-transition: border-color .3s;
-	-o-transition: border-color .3s;
-	transition: border-color .3s;
+	border-radius: 4px;
+	border: 1px solid #007aff;
+	-webkit-transition: background-color .3s;
+	-moz-transition: background-color .3s;
+	transition: background-color .3s;
 }
 .available-button:hover{
-	border-color: #08C;
-	text-decoration: none;
+	text-decoration: underline;
 }
 .screenshots-container{
 	margin-top: 30px;
@@ -115,9 +104,9 @@ header a{
 }
 .screenshot{
 	background-color: #fff;
-	border: 1px solid #333;
-	box-shadow: 0 2px 3px rgba(0,0,0,.3);
-	border-radius: 6px;
+	border: 1px solid #999;
+	box-shadow: 0 2px 3px rgba(0,0,0,.1);
+	border-radius: 2px;
 	margin: 0 -1px;
 }
 #iphone-screenshots-container{
@@ -129,17 +118,7 @@ header a{
 	width: 320px;
 	height: 460px;
 	background-repeat: no-repeat;
-	-moz-background-size: 320px 460px;
-	-o-background-size: 320px 460px;
-	background-size: 320px 460px;
 	vertical-align: top;
-}
-#iphone-1-screenshot{
-	background-image: url(screenshots/iphone-1.png);
-	margin-bottom: 10px;
-}
-#iphone-2-screenshot{
-	background-image: url(screenshots/iphone-2.png);
 }
 #ipad-container{
 	display: none;
@@ -147,30 +126,20 @@ header a{
 #web-1-screenshot{
 	display: none;
 }
-#web-2-screenshot{
-	display: inline-block;
-	width: 320px;
-	height: 600px;
-	background: #fff url(screenshots/web-2.png) no-repeat;
-}
 .cols{
 	margin: 20px 20px 0;
 }
 .col{
 	text-align: left;
 	padding-bottom: 10px;
+	font-size: 15px;
 }
 footer{
 	font-size: 13px;
 	text-align: center;
 	padding: 20px;
 	color: #666;
-	background-color: #eee;
-	background-image: -webkit-linear-gradient(top, #ddd, #eee 5px);
-	background-image: -moz-linear-gradient(top, #ddd, #eee 5px);
-	background-image: -ms-linear-gradient(top, #ddd, #eee 5px);
-	background-image: -o-linear-gradient(top, #ddd, #eee 5px);
-	background-image: linear-gradient(top, #ddd, #eee 5px);
+	background-color: #fafafa;
 	border-top: 1px solid #ccc;
 }
 @media all and (min-height: 481px){
@@ -204,21 +173,12 @@ footer{
 	}
 	#ipad-screenshot{
 		display: block;
-		width: 1024px;
-		height: 748px;
-		background: #fff url(screenshots/ipad.png) no-repeat;
-		-moz-background-size: 1024px 748px;
-		-o-background-size: 1024px 748px;
-		background-size: 1024px 748px;
 	}
 	#web-screenshot-container{
 		margin-left: 20px;
 	}
 	#web-1-screenshot{
 		display: inline-block;
-		width: 800px;
-		height: 600px;
-		background: #fff url(screenshots/web-1.png) no-repeat;
 		margin: 0px 0 30px;
 	}
 	#web-2-screenshot{
@@ -266,27 +226,8 @@ footer{
 	only screen and (min-device-pixel-ratio: 1.5) {
 
 	#app-icon{
-		width: 81px;
-		height: 81px;
-		-moz-background-size: 81px 81px;
-		-o-background-size: 81px 81px;
-		background-size: 81px 81px;
+		background-size: 72px 72px;
 		background-image: url(icons/app-icon@2x.png);
-	}
-	#iphone-screenshots-container div{
-		height: 548px;
-		-moz-background-size: 320px 548px;
-		-o-background-size: 320px 548px;
-		background-size: 320px 548px;
-	}
-	#iphone-1-screenshot{
-		background-image: url(screenshots/iphone-1@2x.png);
-	}
-	#iphone-2-screenshot{
-		background-image: url(screenshots/iphone-2@2x.png);
-	}
-	#ipad-screenshot{
-		background-image: url(screenshots/ipad@2x.png);
 	}
 }
 

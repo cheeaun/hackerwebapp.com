@@ -3,6 +3,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HackerWeb &ndash; a simply readable Hacker News web app</title>
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300">
 <link rel="stylesheet" href="style.css">
 <meta itemprop="image" content="icons/app-icon.png">
 <meta property="og:url" content="http://hackerwebapp.com/">
@@ -10,15 +11,16 @@
 <meta property="og:description" content="A simply readable Hacker News web app">
 <meta property="og:image" content="http://hackerwebapp.com/icons/app-icon.png">
 <meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="82">
-<meta property="og:image:height" content="82">
+<meta property="og:image:width" content="72">
+<meta property="og:image:height" content="72">
 <script>
-var _gaq = [['_setAccount', 'UA-36575624-1'], ['_trackPageview']];
-(function(d, t){
-	var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
-	g.src = ('https:' == d.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	s.parentNode.insertBefore(g, s);
-}(document, 'script'));
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-36575624-1', 'hackerwebapp.com');
+ga('send', 'pageview');
 </script>
 <header>
 	<div class="container">
@@ -32,11 +34,11 @@ var _gaq = [['_setAccount', 'UA-36575624-1'], ['_trackPageview']];
 	<section class="container">
 		<header>
 			<h2>Optimized for the iPhone &amp; iPod&nbsp;Touch.</h2>
-			<p>Specially designed to look &amp; feel like a native iOS app. Experience the best of both web and native, right at your fingertips.</p>
+			<p>Specially designed to look &amp; feel like a native iOS app. Experience the best of both web and native, right at your fingertips.</p>
 		</header>
 		<div id="iphone-screenshots-container" class="screenshots-container">
-			<div id="iphone-1-screenshot" class="screenshot" role="img" aria-label="Screenshot of Hacker News web app on iPhone/iPod Touch"></div>
-			<div id="iphone-2-screenshot" class="screenshot" role="img" aria-label="Another screenshot of Hacker News web app on iPhone/iPod Touch"></div>
+			<img id="iphone-1-screenshot" class="screenshot" src="screenshots/iphone-1@2x.png" width="320" height="568" alt="Screenshot of Hacker News web app on iPhone">
+			<img id="iphone-2-screenshot" class="screenshot" src="screenshots/iphone-2@2x.png" width="320" height="568" alt="Another creenshot of Hacker News web app on iPhone">
 		</div>
 	</section>
 </div>
@@ -44,10 +46,10 @@ var _gaq = [['_setAccount', 'UA-36575624-1'], ['_trackPageview']];
 	<section class="container" id="ipad-container">
 		<header>
 			<h2>Optimized for the iPad&nbsp;too.</h2>
-			<p>It's not a blown-up, stretched-out app and it takes full advantange of the larger screen.</p>
+			<p>It's not a blown-up, stretched-out app and it takes full advantange of the larger screen.</p>
 		</header>
 		<div id="ipad-screenshot-container" class="screenshots-container">
-			<div id="ipad-screenshot" class="screenshot" role="img" aria-label="Screenshot of Hacker News web app on iPad"></div>
+			<img id="ipad-screenshot" class="screenshot" src="screenshots/ipad@2x.png" width="1024" height="768" alt="Screenshot of Hacker News web app on iPad">
 		</div>
 	</section>
 </div>
@@ -55,11 +57,11 @@ var _gaq = [['_setAccount', 'UA-36575624-1'], ['_trackPageview']];
 	<section class="container">
 		<header>
 			<h2>Works for other web browsers as&nbsp;well.</h2>
-			<p>Don't worry, non-iOS users are not left out. This 'web' interface is for everyone else.</p>
+			<p>Don't worry, non-iOS users are not left out. This 'web' interface is for everyone else.</p>
 		</header>
 		<div id="web-screenshot-container" class="screenshots-container">
-			<div id="web-1-screenshot" class="screenshot" role="img" aria-label="Screenshot of Hacker News web app on a web browser"></div>
-			<div id="web-2-screenshot" class="screenshot" role="img" aria-label="Another screenshot of Hacker News web app on a web browser"></div>
+			<img id="web-1-screenshot" class="screenshot" src="screenshots/web-1.png" width="740" height="600" alt="Screenshot of Hacker News web app on a desktop web browser">
+			<img id="web-2-screenshot" class="screenshot" src="screenshots/web-2.png" width="320" height="600" alt="Screenshot of Hacker News web app on a mobile web browser">
 		</div>
 	</section>
 </div>
@@ -75,19 +77,19 @@ var _gaq = [['_setAccount', 'UA-36575624-1'], ['_trackPageview']];
 			</div>
 			<div class="col">
 				<h3>Threaded comments</h3>
-				<p>HackerWeb displays a nicely threaded interface for comments. If there are too many comments on the page, HackerWeb intelligently collapses them so that you don't have to scroll like mad.</p>
+				<p>HackerWeb displays a nicely threaded interface for comments. If there are too many comments on the page, HackerWeb intelligently collapses them so that you don't have to scroll like mad.</p>
 			</div>
 			<div class="col">
 				<h3>Shows subdomains</h3>
-				<p>Hacker News doesn't show subdomains for domains beside stories, which may sometimes confuse readers. HackerWeb shows them and restores faith in humanity.</p>
+				<p>Hacker News doesn't show subdomains for domains beside stories, which may sometimes confuse readers. HackerWeb shows them and restores faith in humanity.</p>
 			</div>
 			<div class="col">
 				<h3>Beautiful poll chart</h3>
-				<p>If the story contains a poll, HackerWeb will show a poll bar chart to visualize the points for each choice. Way better than just plain numbers and text.</p>
+				<p>If the story contains a poll, HackerWeb will show a poll bar chart to visualize the points for each choice. Way better than just plain numbers and text.</p>
 			</div>
 			<div class="col">
 				<h3>Automatic updates</h3>
-				<p>HackerWeb silently auto-updates itself to the latest version and you won't even notice it. No interruptions, no prompts, no action needed.</p>
+				<p>HackerWeb silently auto-updates itself to the latest version and you won't even notice it. No interruptions, no prompts, no action needed.</p>
 			</div>
 		</div>
 	</section>
@@ -106,16 +108,22 @@ var _gaq = [['_setAccount', 'UA-36575624-1'], ['_trackPageview']];
 	<p>
 		<a href="https://twitter.com/share" class="twitter-share-button" data-related="cheeaun" data-hashtags="hackerweb">Tweet</a>
 		<a href="https://twitter.com/cheeaun" class="twitter-follow-button" data-show-count="false">Follow @cheeaun</a>&nbsp;&nbsp;
-		<iframe src="http://ghbtns.com/github-btn.html?user=cheeaun&repo=hackerweb&type=watch&count=true"
-  allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
-		<iframe src="http://ghbtns.com/github-btn.html?user=cheeaun&type=follow"
-  allowtransparency="true" frameborder="0" scrolling="0" width="132" height="20"></iframe>
+		<a href="https://github.com/cheeaun/hackerweb/" id="github-star-button" data-params="repo=hackerweb&type=watch&count=true" data-width="110">Star</a>
+		<a href="https://github.com/cheeaun/" id="github-follow-button" data-params="type=follow" data-width="132">Follow @cheeaun</a>
 	</p>
-	<p><a href="http://cheeaun.com/blog/2012/03/how-i-built-hacker-news-mobile-web-app">Meticulously built</a> by <a href="http://cheeaun.com/" itemprop="creator">Lim Chee Aun</a>. Open-sourced on <a href="https://github.com/cheeaun/hackerweb">GitHub</a>. Not affiliated with <a href="https://news.ycombinator.com/">Hacker News</a> or&nbsp;<a href="http://ycombinator.com/">YCombinator</a>.</p>
+	<p><a href="http://cheeaun.com/blog/2012/03/how-i-built-hacker-news-mobile-web-app">Meticulously built</a> by <a href="http://cheeaun.com/" itemprop="creator">Lim Chee Aun</a>. Open-sourced on <a href="https://github.com/cheeaun/hackerweb">GitHub</a>. Not affiliated with <a href="https://news.ycombinator.com/">Hacker News</a> or <a href="http://ycombinator.com/">YCombinator</a>.</p>
 </footer>
-<script async>
+<script>
 setTimeout(function(){
-	!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+	!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+
+	var $i = function(id){
+		var $e = document.getElementById('github-'+id+'-button'), params = $e.getAttribute('data-params'), width = $e.getAttribute('data-width'), $f = document.createElement('iframe');
+		$f.src = 'http://ghbtns.com/github-btn.html?user=cheeaun&' + params;
+		$f.width = width; $f.height = 20; $f.allowTransparency = true; $f.frameBorder = 0, $f.scrolling = 0;
+		$e.parentNode.replaceChild($f, $e);
+	};
+	$i('star'); $i('follow');
 }, 2000);
 </script>
 </html>
