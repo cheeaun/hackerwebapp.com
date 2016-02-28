@@ -1,18 +1,196 @@
 <!DOCTYPE html>
-<html itemscope itemtype="http://schema.org/WebPage">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HackerWeb &ndash; a simply readable Hacker News web app</title>
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300">
-<link rel="stylesheet" href="style.css">
-<meta itemprop="image" content="icons/app-icon.png">
-<meta property="og:url" content="http://hackerwebapp.com/">
-<meta property="og:title" content="HackerWeb">
-<meta property="og:description" content="A simply readable Hacker News web app">
-<meta property="og:image" content="http://hackerwebapp.com/icons/app-icon.png">
-<meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="72">
-<meta property="og:image:height" content="72">
+<title>HackerWeb &ndash; A simply readable Hacker News app</title>
+<meta name="description" content="HackerWeb is a simply readable Hacker News app">
+<!-- metacrap: https://adactio.com/journal/9881 -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="HackerWeb">
+<meta name="twitter:url" property="og:url" content="https://hackerwebapp.com">
+<meta name="twitter:title" property="og:title" content="HackerWeb">
+<meta name="twitter:description" property="og:description" content="A simply readable Hacker News app">
+<meta name="twitter:image" property="og:image" content="icons/icon.svg">
+<!-- end metacrap -->
+<style>
+body{
+  font-family: Open Sans, Helvetica Neue, Helvetica, sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 20px;
+  color: #222;
+  text-align: center;
+  cursor: default;
+}
+*{
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+a{
+  color: #007aff;
+  text-decoration: underline;
+}
+#logo{
+  animation: fadeIn 1s cubic-bezier(.3,.3,.3,1) 1s both;
+  margin: 20px;
+}
+/* Easter egg */
+#logo:hover{
+  animation: hue 10s infinite linear 5s;
+}
+@-webkit-keyframes hue{
+  0%{
+    -webkit-filter: hue-rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+  100%{
+    -webkit-filter: hue-rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
+}
+@keyframes hue{
+  0%{
+    -webkit-filter: hue-rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+  100%{
+    -webkit-filter: hue-rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
+}
+header h1{
+  margin: 0;
+  padding: 0;
+}
+header p{
+  margin: 10px;
+  padding: 0;
+  animation: fadeIn 1s cubic-bezier(.3,.3,.3,1) 1.4s both;
+}
+header p a{
+  color: inherit;
+  text-decoration: none;
+}
+header p a:hover{
+  text-decoration: underline;
+}
+header nav{
+  margin-top: 2em;
+  animation: fadeIn 1s cubic-bezier(.3,.3,.3,1) 1.5s both;
+}
+#iframe-container{
+  -webkit-user-select: none;
+  user-select: none;
+  position: relative;
+  height: 568px;
+  max-height: 80vh;
+  margin: 20px 0 0;
+  animation: fadeIn 1s cubic-bezier(.3,.3,.3,1) 1.7s both;
+}
+#iframe-cover{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+iframe{
+  width: 100%;
+  min-width: 280px;
+  max-width: 414px;
+  height: 100%;
+  pointer-events: none;
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  box-shadow: 0 0 5px rgba(0,0,0,.2);
+  transform: scale(.9, .9);
+}
+#actions{
+  animation: fadeIn 1s cubic-bezier(.3,.3,.3,1) 2s both;
+  letter-spacing: 10px;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  padding: 10px 0;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1) 25%);
+}
+#actions a{
+  letter-spacing: normal;
+  margin-top: 10px;
+}
+.button{
+  display: inline-block;
+  padding: 10px 13px;
+  line-height: 1;
+  color: #fff;
+  background-color: #007aff;
+  background-image: linear-gradient(190deg, #1ad6fd, #007aff 50%);
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+.button-orange{
+  background-color: #f60;
+  background-image: linear-gradient(170deg, #fc0, #f60 50%);
+}
+.button:hover,
+.button:active{
+  opacity: .8;
+}
+.button:active{
+  transform: translateY(1px);
+}
+footer{
+  color: #aaa;
+  margin-top: 40px;
+  animation: fadeIn 1s cubic-bezier(.3,.3,.3,1) 2s both;
+  font-size: 14px;
+}
+footer a{
+  color: #aaa;
+  text-decoration: none;
+  border-bottom: 1px solid #ddd;
+}
+footer a:hover{
+  border-bottom: 1px solid #aaa;
+}
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (min-width: 720px){
+  html{
+    display: flex;
+    height: 100%;
+  }
+  body{
+    width: 720px;
+    margin: auto;
+  }
+  header{
+    float: left;
+    width: 50%;
+    margin-top: 40px;
+  }
+  #iframe-container{
+    float: right;
+    width: 50%;
+    margin: 0;
+  }
+  #actions{
+    clear: left;
+    background-image: none;
+    margin-right: 50%;
+  }
+}
+</style>
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -21,109 +199,45 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 
 ga('create', 'UA-36575624-1', 'hackerwebapp.com');
 ga('send', 'pageview');
+
+WebFontConfig = {
+  google: { families: [ 'Open+Sans:400,600:latin' ] }
+};
+(function() {
+  var wf = document.createElement('script');
+  wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+  wf.type = 'text/javascript';
+  wf.async = 'true';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(wf, s);
+})();
 </script>
 <header>
-	<div class="container">
-		<div id="app-icon"></div>
-		<h1 itemprop="name">HackerWeb</h1>
-		<p itemprop="description">A simply readable <a href="https://news.ycombinator.com/" target="_blank">Hacker News</a> web app</p>
-		<p><a href="http://cheeaun.github.io/hackerweb/" target="_blank" class="available-button" onclick="_gaq.push(['_trackEvent', 'Outbound links', 'Clicks', this.href]);">Available on the web</a></p>
-	</div>
+  <h1><img id="logo" src="icons/logo.svg" width="60" height="60" alt="HackerWeb"></h1>
+  <p>HackerWeb is a <br>simply readable <a href="https://news.ycombinator.com/" target="_blank">Hacker News</a> app.</p>
 </header>
-<div class="body-section">
-	<section class="container">
-		<header>
-			<h2>Optimized for the iPhone &amp; iPod Touch.</h2>
-			<p>Specially designed to look &amp; feel like a native iOS app. Experience the best of both web and native, right at your fingertips.</p>
-		</header>
-		<div id="iphone-screenshots-container" class="screenshots-container">
-			<img id="iphone-1-screenshot" class="screenshot" src="screenshots/iphone-1@2x.png" width="320" height="568" alt="Screenshot of Hacker News web app on iPhone">
-			<img id="iphone-2-screenshot" class="screenshot" src="screenshots/iphone-2@2x.png" width="320" height="568" alt="Another creenshot of Hacker News web app on iPhone">
-		</div>
-	</section>
+<div id="iframe-container">
+  <iframe frameborder="0" scrolling="no" src="https://cheeaun.github.com/hackerweb/?preview"></iframe>
+  <div id="iframe-cover"></div>
 </div>
-<div class="body-section">
-	<section class="container" id="ipad-container">
-		<header>
-			<h2>Optimized for the iPad too.</h2>
-			<p>It's not a blown-up, stretched-out app and it takes full advantange of the larger screen.</p>
-		</header>
-		<div id="ipad-screenshot-container" class="screenshots-container">
-			<img id="ipad-screenshot" class="screenshot" src="screenshots/ipad@2x.png" width="1024" height="768" alt="Screenshot of Hacker News web app on iPad">
-		</div>
-	</section>
-</div>
-<div class="body-section">
-	<section class="container">
-		<header>
-			<h2>Works for other web browsers as well.</h2>
-			<p>Don't worry, non-iOS users are not left out. This 'web' interface is for everyone else.</p>
-		</header>
-		<div id="web-screenshot-container" class="screenshots-container">
-			<img id="web-1-screenshot" class="screenshot" src="screenshots/web-1.png" width="740" height="600" alt="Screenshot of Hacker News web app on a desktop web browser">
-			<img id="web-2-screenshot" class="screenshot" src="screenshots/web-2.png" width="320" height="600" alt="Screenshot of Hacker News web app on a mobile web browser">
-		</div>
-	</section>
-</div>
-<div class="body-section">
-	<section class="container">
-		<header>
-			<h2>Not a lot of fancy features.</h2>
-		</header>
-		<div class="cols">
-			<div class="col">
-				<h3>Only read, no write</h3>
-				<p>You can't upvote stories or even post anything. You can't log in either. Just spend all your time browsing front-page stories, reading articles and reading comments. Pure reading bliss.</p>
-			</div>
-			<div class="col">
-				<h3>Threaded comments</h3>
-				<p>HackerWeb displays a nicely threaded interface for comments. If there are too many comments on the page, HackerWeb intelligently collapses them so that you don't have to scroll like mad.</p>
-			</div>
-			<div class="col">
-				<h3>Shows subdomains</h3>
-				<p>Hacker News doesn't show subdomains for domains beside stories, which may sometimes confuse readers. HackerWeb shows them and restores faith in humanity.</p>
-			</div>
-			<div class="col">
-				<h3>Beautiful poll chart</h3>
-				<p>If the story contains a poll, HackerWeb will show a poll bar chart to visualize the points for each choice. Way better than just plain numbers and text.</p>
-			</div>
-			<div class="col">
-				<h3>Automatic updates</h3>
-				<p>HackerWeb silently auto-updates itself to the latest version and you won't even notice it. No interruptions, no prompts, no action needed.</p>
-			</div>
-		</div>
-	</section>
-</div>
-<div class="body-section body-section-last">
-	<section class="container">
-		<header>
-			<h2>Just give it a try.</h2>
-		</header>
-		<div class="cols">
-			<p><a href="http://cheeaun.github.io/hackerweb/" target="_blank" class="available-button" onclick="_gaq.push(['_trackEvent', 'Outbound links', 'Clicks', this.href]);">Available on the web</a></p>
-		</div>
-	</section>
+<div id="actions">
+  <a href="https://cheeaun.github.com/hackerweb/" target="_blank" class="button button-orange">Available on the web</a>
+  <a href="#" class="button">Download the app</a>
 </div>
 <footer>
-	<p>
-		<a href="https://twitter.com/share" class="twitter-share-button" data-related="cheeaun" data-hashtags="hackerweb">Tweet</a>
-		<a href="https://twitter.com/cheeaun" class="twitter-follow-button" data-show-count="false">Follow @cheeaun</a>&nbsp;&nbsp;
-		<a href="https://github.com/cheeaun/hackerweb/" id="github-star-button" data-params="repo=hackerweb&type=watch&count=true" data-width="110">Star</a>
-		<a href="https://github.com/cheeaun/" id="github-follow-button" data-params="type=follow" data-width="132">Follow @cheeaun</a>
-	</p>
-	<p><a href="http://cheeaun.com/blog/2012/03/how-i-built-hacker-news-mobile-web-app">Meticulously built</a> by <a href="http://cheeaun.com/" itemprop="creator">Lim Chee Aun</a>. Open-sourced on <a href="https://github.com/cheeaun/hackerweb">GitHub</a>. Not affiliated with <a href="https://news.ycombinator.com/">Hacker News</a> or <a href="http://ycombinator.com/">YCombinator</a>.</p>
+  <p>Follow <a href="https://twitter.com/cheeaun" target="_blank">@cheeaun</a> &amp; <a href="https://twitter.com/hackerwebapp" target="_blank">@hackerwebapp</a> </p>
 </footer>
-<script>
-setTimeout(function(){
-	!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
-
-	var $i = function(id){
-		var $e = document.getElementById('github-'+id+'-button'), params = $e.getAttribute('data-params'), width = $e.getAttribute('data-width'), $f = document.createElement('iframe');
-		$f.src = 'http://ghbtns.com/github-btn.html?user=cheeaun&' + params;
-		$f.width = width; $f.height = 20; $f.allowTransparency = true; $f.frameBorder = 0, $f.scrolling = 0;
-		$e.parentNode.replaceChild($f, $e);
-	};
-	$i('star'); $i('follow');
-}, 2000);
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "SoftwareApplication",
+  "name" : "HackerWeb",
+  "description": "A simply readable Hacker News web app",
+  "image" : "https://hackerwebapp.com/icons/icon.svg",
+  "url" : "https://cheeaun.github.io/hackerweb/",
+  "author" : {
+    "@type" : "Person",
+    "name" : "Lim Chee Aun"
+  }
+}
 </script>
-</html>

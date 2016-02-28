@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96.68 121.1">
+  <defs>
+    <linearGradient id="b" x2="76.69" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1 0 0 -1 10.002 111.1)">
+      <stop stop-color="#f60" offset="0"/>
+      <stop stop-color="#007aff" offset="1"/>
+    </linearGradient>
+    <linearGradient id="c" x2="76.69" gradientUnits="userSpaceOnUse" gradientTransform="translate(51.66 39.465)">
+      <stop stop-color="#fc0" offset="0"/>
+      <stop stop-color="#1ad6fd" offset="1"/>
+    </linearGradient>
+    <linearGradient id="a" x2="0" y2="-109.5" gradientUnits="userSpaceOnUse" gradientTransform="translate(59.25 -30)">
+      <stop stop-color="#fff" offset="0"/>
+      <stop offset="1"/>
+    </linearGradient>
+    <mask id="d">
+      <path fill="url(#a)" d="M-18-198h216V18H-18z" transform="scale(1 -1)"/>
+    </mask>
+  </defs>
+  <path fill="url(#b)" d="M0 115.44V18.76c0-7.03 1.75-9.67 8.8-13.2l8.78-4.4c5.18-2.53 8.78-.86 8.78 4.4v35.17c0 5.28 3.6 7.05 8.8 4.4l8.78-4.4c2.63-1.3 6.18-1.3 8.8 0l8.8 4.4c5.18 2.65 8.78.88 8.78-4.4V5.56c0-5.26 3.6-6.93 8.78-4.4l8.8 4.4c7.03 3.53 8.78 6.17 8.78 13.2v96.68c.1 5.36-3.4 7.12-8.8 4.4l-8.78-4.4c-7.04-3.52-8.78-6.16-8.78-13.18V84.7c0-7.05-1.76-9.7-8.8-13.2l-8.78-4.4c-2.62-1.3-6.17-1.3-8.8 0l-8.8 4.4c-7 3.5-8.78 6.14-8.78 13.2v17.56c0 7.02-1.74 9.66-8.78 13.18l-8.8 4.4c-5.37 2.72-8.87.96-8.78-4.4z"/>
+  <path fill="url(#c)" d="M41.66 144.88V48.2c0-7.03 1.75-9.67 8.8-13.2l8.78-4.4c5.18-2.53 8.78-.86 8.78 4.4v35.17c0 5.28 3.6 7.05 8.8 4.4l8.78-4.4c2.63-1.3 6.18-1.3 8.8 0l8.8 4.4c5.18 2.65 8.78.88 8.78-4.4V35c0-5.26 3.6-6.93 8.78-4.4l8.8 4.4c7.03 3.53 8.78 6.17 8.78 13.2v96.68c.1 5.36-3.4 7.12-8.8 4.4l-8.78-4.4c-7.04-3.52-8.78-6.16-8.78-13.18v-17.57c0-7.04-1.76-9.68-8.8-13.2l-8.78-4.4c-2.62-1.3-6.17-1.3-8.8 0l-8.8 4.4c-7 3.5-8.78 6.15-8.78 13.2v17.57c0 7.02-1.74 9.66-8.78 13.18l-8.8 4.4c-5.37 2.72-8.87.96-8.78-4.4z" mask="url(#d)" transform="translate(-41.658 -29.44)"/>
+</svg>
