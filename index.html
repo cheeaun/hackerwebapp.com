@@ -128,19 +128,16 @@ iframe{
 }
 #actions{
   animation: fadeIn 1s cubic-bezier(.3,.3,.3,1) 2s both;
-  letter-spacing: 10px;
   position: -webkit-sticky;
   position: sticky;
   bottom: 0;
   padding: 10px 0;
-  background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1) 25%);
-}
-#actions a{
-  letter-spacing: normal;
-  margin-top: 10px;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1) 20%);
+  font-size: .8em;
 }
 .button{
   display: inline-block;
+  margin-top: 2px;
   padding: 10px 13px;
   line-height: 1;
   color: #fff;
@@ -232,8 +229,10 @@ WebFontConfig = {
   <div id="iframe-cover"></div>
 </div>
 <div id="actions">
-  <a href="https://cheeaun.github.com/hackerweb/" target="_blank" class="button button-orange">Available on the web</a>
-  <a href="https://itunes.apple.com/us/app/hackerweb/id1084209377?mt=8" class="button">Download the app</a>
+  <div>Available on&hellip;</div>
+  <a href="https://cheeaun.github.com/hackerweb/" target="_blank" class="button button-orange">Web</a>
+  <a href="https://itunes.apple.com/us/app/id1084209377" class="button">iOS</a>
+  <a href="https://play.google.com/store/apps/details?id=cheeaun.hackerweb" class="button">Android</a>
 </div>
 <footer>
   <p>Follow <a href="https://twitter.com/cheeaun" target="_blank">@cheeaun</a> &amp; <a href="https://twitter.com/hackerwebapp" target="_blank">@hackerwebapp</a> </p>
